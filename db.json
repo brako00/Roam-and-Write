@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "name": "Iva",
+      "lastname": "Ivić",
+      "username": "IvaTravel",
+      "password": "password1",
+      "image": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "role": "user",
+      "id": "2"
+    },
+    {
+      "name": "Matko",
+      "lastname": "Matić",
+      "username": "Mr. Wordwide",
+      "password": "password2",
+      "image": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "role": "user",
+      "id": "4"
+    },
+    {
+      "name": "Bruna",
+      "lastname": "Rako",
+      "username": "bRako",
+      "password": "password3",
+      "image": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "role": "admin",
+      "id": "6"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "0",
+      "title": "Maldives Heaven",
+      "content": "The Maldives is a tropical dream come true, where turquoise waters and pristine beaches create a perfect escape from the everyday. My recent trip to this idyllic archipelago was a blissful retreat into nature’s paradise.\n\nI began my journey on a private island resort, where overwater bungalows offered direct access to the crystal-clear lagoon. Mornings started with snorkeling among vibrant coral reefs and schools of colorful fish, while the afternoons were spent lounging on white sandy beaches, soaking up the sun.\n\nOne of the highlights was a sunset cruise. As the sky turned shades of orange and pink, we sailed through the calm waters, spotting playful dolphins leaping alongside the boat. The tranquil beauty of the Maldives at dusk was simply mesmerizing.\n\nDining in the Maldives was an experience of its own. I enjoyed fresh seafood at a beachfront restaurant, with the sound of waves providing a soothing backdrop. Each meal was a celebration of local flavors and culinary excellence.\n\nAs night fell, I marveled at the star-studded sky and the gentle lull of the ocean. The Maldives offers not just a vacation but a rejuvenating journey into tranquility, where every moment feels like a beautiful dream.",
+      "image": "https://images.pexels.com/photos/1430676/pexels-photo-1430676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Maldives",
+      "dateStart": "2024-04-13T08:30:00Z",
+      "dateEnd": "2024-04-20T08:30:00Z",
+      "username": "Mr. Wordwide",
+      "likes": 89
+    },
+    {
+      "id": "1",
+      "title": "Luxuries of Dubai",
+      "content": "Dubai, a city where the future meets tradition, never ceases to amaze. My recent visit was a whirlwind of modern marvels and timeless charm.\n\nI started my day at the Burj Khalifa, the tallest building in the world. The observation deck offered panoramic views of the sprawling cityscape, with its gleaming skyscrapers and vast deserts blending seamlessly. Standing on top of the world, the view was nothing short of breathtaking.\n\nNext, I strolled through the Dubai Mall, a shopping paradise that feels more like an entertainment complex. From luxury boutiques to the stunning Dubai Aquarium, there was no shortage of excitement. I even caught a glimpse of the Dubai Fountain show, where water danced in sync with music, captivating everyone around.\n\nA visit to Dubai wouldn’t be complete without exploring the historic Al Fahidi Neighborhood. Wandering through its narrow lanes and traditional wind-tower architecture, I felt a sense of connection to Dubai’s rich past amidst the modern splendor.\n\nAs evening approached, I took a traditional abra ride across Dubai Creek. The gentle sway of the boat and the shimmering city lights provided a serene contrast to the day's hustle.\n\nEnding the day with a dinner at a rooftop restaurant, I enjoyed delicious Middle Eastern cuisine while gazing out at the illuminated skyline. Dubai’s energy and innovation left a lasting impression, making it a city that dazzles both the eye and the spirit.",
+      "image": "https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Dubai",
+      "dateStart": "2024-10-23T08:30:00Z",
+      "dateEnd": "2024-10-25T08:30:00Z",
+      "username": "Mr. Wordwide",
+      "likes": 315
+    },
+    {
+      "id": "2",
+      "title": "Prague Wonders",
+      "content": "Prague, with its enchanting blend of history, culture, and architecture, feels like stepping into a fairytale. My recent visit to this mesmerizing city left me captivated by its charm and timeless beauty.\n\nI began my exploration at the Old Town Square, where history comes alive. The medieval Astronomical Clock, with its intricate mechanisms, drew a crowd eager to watch its hourly show. As I wandered through the square, surrounded by Gothic and Baroque buildings, the atmosphere was rich with the whispers of the past.\n\nCrossing the iconic Charles Bridge was like walking through history. Statues of saints line the bridge, each with its own story, while artists and musicians bring the bridge to life with their talents. The view from the bridge, with Prague Castle perched majestically on the hill, is one of the most breathtaking sights in the city.\n\nA visit to Prague wouldn’t be complete without exploring the Prague Castle complex. As I climbed the steps to the castle, the panoramic view of the city’s red rooftops and church spires was stunning. Inside, St. Vitus Cathedral, with its soaring spires and stunning stained glass windows, left me in awe of its grandeur.\n\nAs the day drew to a close, I found myself at a cozy café, enjoying a warm cup of Czech coffee and a slice of decadent cake. The streets of Prague, bathed in the golden light of the setting sun, took on a magical quality.\n\nPrague is a city where every corner tells a story, where history and modernity coexist in perfect harmony. Whether you're drawn to its architectural marvels, rich history, or vibrant culture, Prague is a city that leaves a lasting impression on all who visit.",
+      "image": "https://images.pexels.com/photos/126292/pexels-photo-126292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Prague",
+
+      "dateStart": "2024-01-01T08:30:00Z",
+      "dateEnd": "2024-01-09T08:30:00Z",
+
+      "username": "IvaTravel",
+      "likes": 39
+    },
+    {
+      "id": "3",
+      "title": "Tanzania Safari",
+      "content": "Tanzania is a land where the wild reigns supreme, offering one of the most exhilarating safari experiences in the world. My recent journey into the heart of Tanzania’s wilderness was nothing short of magical.\n\nWe began our adventure in the Serengeti, the crown jewel of Tanzania's national parks. As our jeep rumbled across the vast savannah, we were greeted by the iconic sight of wildebeest and zebras grazing in the early morning light. The Great Migration, often dubbed the \"greatest wildlife show on Earth,\" was in full swing, with thousands of animals moving in unison—a testament to the raw, untamed beauty of this land.\n\nNext, we ventured into the Ngorongoro Crater, a UNESCO World Heritage site, and a haven for wildlife. The crater’s floor was alive with activity—lions lounging in the shade, elephants ambling gracefully, and flamingos painting the lakeshores pink. The sheer density of wildlife within the crater is astonishing, making every turn a new discovery.\n\nOne of the highlights was a close encounter with a pride of lions. Our guide expertly navigated us to a spot where we could observe these majestic creatures up close, their golden coats blending with the tall grass, their presence commanding respect.\n\nOur safari wasn’t just about the big game. We spent time with the Maasai people, learning about their culture and traditions. Their vibrant clothing and warm hospitality added a rich cultural layer to our wilderness experience.\n\nAs the sun set over the African plains, painting the sky in hues of orange and red, I felt a deep connection to the land. Tanzania’s safari is not just a trip; it's a profound experience that stays with you long after the journey ends—a reminder of the beauty and wonder of the natural world.",
+      "image": "https://images.pexels.com/photos/2862070/pexels-photo-2862070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Tanzania",
+
+      "dateStart": "2022-05-13T08:30:00Z",
+      "dateEnd": "2024-05-30T08:30:00Z",
+      "username": "IvaTravel",
+      "likes": 130
+    },
+    {
+      "id": "23",
+      "title": "Busy city of New York",
+      "content": "New York City, the bustling metropolis that’s always alive with energy and excitement, delivered yet another unforgettable experience. My recent day in the Big Apple was a whirlwind of iconic landmarks and vibrant street life.\n\nI kicked off my adventure with a leisurely walk through Central Park. The green oasis amid the urban sprawl provided a refreshing break, where I enjoyed watching street performers and taking in the serene landscape. The contrast of the park's natural beauty against the backdrop of towering skyscrapers was truly striking.\n\nNext, I headed to Times Square, the beating heart of the city. The dazzling billboards and throngs of people created an electric atmosphere that was both exhilarating and overwhelming. Amid the chaos, I found a moment of peace at a nearby café, savoring a delicious New York-style pizza.\n\nIn the afternoon, I visited the Metropolitan Museum of Art. Wandering through its vast galleries, I was captivated by the world-class collections that span centuries and continents. The museum's grandeur and the richness of its exhibits made for a truly enriching experience.\n\nAs evening approached, I took in the stunning views from the Top of the Rock observation deck. Watching the city lights twinkle below as the sun set was a magical way to end the day.\n\nNew York City never fails to impress, with its blend of iconic sights, cultural treasures, and an unrelenting pulse that keeps you coming back for more.",
+      "image": "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg",
+      "location": "New York",
+      "dateStart": "2024-02-13T08:30:00Z",
+      "dateEnd": "2024-02-25T08:30:00Z",
+      "username": "bRako",
+      "likes": 137
+    },
+    {
+      "id": "25",
+      "title": "Hidden Gems of Croatia",
+      "content": "Croatia, with its stunning Adriatic coastline and historic charm, offers a perfect blend of natural beauty and cultural richness. My recent visit was a delightful immersion into this Mediterranean gem.\n\nI started my day exploring the ancient city of Dubrovnik, often referred to as the 'Pearl of the Adriatic.' Wandering through its well-preserved Old Town, with its narrow streets and majestic city walls, felt like stepping back in time. The views from the city walls, overlooking the turquoise sea and terracotta rooftops, were breathtaking.\n\nAfter soaking in the history, I headed to the beautiful beaches of the Dalmatian Coast. The clear, azure waters and pebbly shores were perfect for a relaxing afternoon swim. I enjoyed a leisurely lunch at a seaside restaurant, savoring fresh seafood while watching the waves gently lap against the shore.\n\nIn the evening, I ventured to Split, another Croatian treasure. The vibrant promenade, lined with palm trees and bustling with life, was the perfect place to unwind. I explored Diocletian’s Palace, a Roman-era marvel that’s now a lively hub of cafes, shops, and historical wonders.\n\nAs the sun set, casting a golden hue over the Adriatic, I marveled at the beauty of Croatia. Its combination of stunning landscapes, rich history, and warm hospitality made for an unforgettable experience.",
+      "image": "https://images.pexels.com/photos/580897/pexels-photo-580897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Croatia",
+      "dateStart": "2023-03-03T08:30:00Z",
+      "dateEnd": "2023-04-15T08:30:00Z",
+      "username": "bRako",
+      "likes": 390
+    },
+    {
+      "id": "c772",
+      "title": "Barcelona Vibes",
+      "content": "Barcelona, with its vibrant energy and stunning architecture, offers a captivating blend of old-world charm and modern flair. My recent visit to this Catalan capital was a feast for the senses.\n\nI started my day with a visit to the iconic Sagrada Família. Gaudí’s masterpiece, with its intricate facades and soaring towers, left me in awe. The interior, bathed in colorful light from the stained glass windows, was equally mesmerizing.\n\nNext, I strolled down La Rambla, the city’s lively pedestrian street. The blend of street performers, bustling markets, and charming cafes created an atmosphere full of life and color. I made a stop at La Boqueria Market, where I indulged in fresh local produce and delicious tapas.\n\nIn the afternoon, I explored the Gothic Quarter, with its narrow medieval streets and historic buildings. The blend of Roman ruins and medieval architecture provided a fascinating glimpse into Barcelona’s past.\n\nAs the day drew to a close, I relaxed on the beaches of Barceloneta. The golden sands and gentle waves offered a perfect backdrop for a sunset stroll. Dining at a beachfront restaurant, I enjoyed a delightful meal of seafood paella, savoring the flavors of Catalonia.\n\nBarcelona’s vibrant culture, stunning architecture, and delicious cuisine made for a truly unforgettable experience, leaving me eager to return to this dynamic city.",
+      "image": "https://images.pexels.com/photos/175934/pexels-photo-175934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Barcelona",
+      "dateStart": "2024-04-30T08:30:00Z",
+      "dateEnd": "2024-05-15T08:30:00Z",
+      "username": "Mr. Wordwide",
+      "likes": 94
+    }
+  ]
+}

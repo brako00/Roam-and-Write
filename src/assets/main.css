@@ -1,0 +1,20 @@
+@import './base.css';
+
+#app {
+  padding: 0px;
+}
+
+.titleClass {
+  @apply text-4xl font-bold text-black p-4 shadow-lg;
+}
+
+.field-label {
+  @apply text-sm  text-black;
+}
+
+.field-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  @apply pb-5 gap-1;
+}
