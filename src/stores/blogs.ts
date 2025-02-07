@@ -10,7 +10,9 @@ export const useBlogsStore = defineStore('blogs', () => {
 
   const fetchFilteredBlogs = async (payload: blogFilter) => {
     try {
-      const response = await axios.post(api_url + Endpoints.GET_FILTERED_BLOGS, payload)
+      //real backend
+      // const response = await axios.post(api_url + Endpoints.GET_FILTERED_BLOGS, payload)
+      const response = await axios.get('http://localhost:3000/blogs')
 
       blogs.value = response.data
     } catch (error) {

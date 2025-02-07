@@ -13,29 +13,32 @@ onBeforeMount(async () => {
 //add number of blogs and likes to the blogger card
 </script>
 <template>
-  <div v-for="blogger in bloggers" :key="blogger.id">
-    <v-card hover class="m-4 p-4">
-      <v-row align="start">
-        <!-- Avatar Section -->
-        <v-col cols="2" class="text-left m-4">
-          <v-avatar size="100">
-            <v-img v-if="blogger.image !== null" :src="blogger.image" />
-            <v-img v-else src="/user.png" />
-          </v-avatar>
-        </v-col>
+  <div
+    v-for="blogger in bloggers"
+    :key="blogger.id"
+    class="bg-white shadow-md rounded-lg p-6 flex items-center justify-between space-x-4 m-4 hoverClass"
+  >
+    <!-- Profile Image -->
+    <img :src="blogger.image" class="rounded-full w-24 h-24 object-cover" />
 
-        <!-- Name and Username Section -->
-        <v-col cols="5" class="m-4">
-          <div class="font-bold text-2xl">{{ blogger.username }}</div>
-          <div>{{ blogger.name }} {{ blogger.lastname }}</div>
-        </v-col>
+    <!-- User Info -->
+    <div class="flex-1 ml-12">
+      <div class="font-bold text-2xl">{{ blogger.username }}</div>
+      <div class="text-gray-600">{{ blogger.name }} {{ blogger.lastname }}</div>
+    </div>
 
-        <!-- Stats Section -->
-        <v-col cols="3" class="text-center m-4 mt-8">
-          <div>Blogs: {{ blogger.numberOfBlogs }}</div>
-          <div>Likes: {{ blogger.numberOfLikes }}</div>
-        </v-col>
-      </v-row>
-    </v-card>
+    <!-- Stats -->
+    <div class="text-left text-gray-700">
+      <div><span class="font-semibold">Blogs:</span> {{ blogger.numberOfBlogs }}</div>
+      <div><span class="font-semibold">Likes:</span> {{ blogger.numberOfLikes }}</div>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.hoverClass:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  background-color: #f6f6f6;
+}
+</style>

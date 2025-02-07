@@ -26,17 +26,9 @@ onBeforeMount(async () => {
   <div v-if="!blogs.length">
     <h1 class="text-center text-xl m-10 font-bold">No blogs to show</h1>
   </div>
-  <v-row>
-    <v-col
-      cols="12"
-      sm="6"
-      md="4"
-      lg="3"
-      v-for="blog in blogs"
-      :key="blog.id"
-      class="flex justify-center items-center"
-    >
-      <BlogCard :blog="blog" />
-    </v-col>
-  </v-row>
+  <div
+    class="grid gap-4 place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+  >
+    <BlogCard v-for="blog in blogs" :key="blog.id" :blog="blog" />
+  </div>
 </template>

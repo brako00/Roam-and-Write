@@ -39,52 +39,45 @@ const numberOfRandomBlogs = 3
 const numberOfFeaturedBlogs = 4
 const randomBlogs = ref<blogType[]>([])
 const featuredBlogs = ref<blogType[]>([])
+
+import ProgressSpinner from 'primevue/progressspinner'
+import Carousel from 'primevue/carousel'
+import Card from 'primevue/card'
 </script>
 <template>
-  <v-progress-circular
-    v-if="isLoading"
-    color="primary"
-    model-value="20"
-    :size="49"
-    :width="7"
-  ></v-progress-circular>
+  <div v-if="isLoading" class="flex justify-center align-center w-full h-full">
+    <ProgressSpinner stroke-width="4" />
+  </div>
   <div v-else>
     <div class="flex justify-center align-center w-full myClass">
-      <v-carousel :cycle="true" :interval="3000" :hide-delimiters="true" class="max-w-4xl">
-        <v-carousel-item
-          v-for="blog in randomBlogs"
-          :key="blog.id"
-          :src="blog.image"
-          :alt="blog.title"
-          :aspect-ratio="16 / 9"
-        >
-          <v-row class="flex align-end justify-end w-full h-full">
-            <v-col cols="12" sm="3">
-              <v-card>
-                <v-card-title>{{ blog.title }}</v-card-title>
-                <v-card-subtitle>{{ blog.username }}</v-card-subtitle>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-carousel-item>
-      </v-carousel>
+      <Carousel
+        :value="randomBlogs"
+        :circular="true"
+        :autoplay-interval="3000"
+        :autoplay="true"
+        :num-visible="1"
+        :num-scroll="1"
+        class="max-w-4xl"
+      >
+        <template #item="slotProps">
+          <div class="flex justify-end align-center w-full h-full">
+            <img :src="slotProps.data.image" :alt="slotProps.data.title" class="aspect-16/9" />
+            <Card class="absolute bottom-0 w-1/3">
+              <template #title>{{ slotProps.data.title }}</template>
+              <template #content>{{ slotProps.data.username }}</template>
+            </Card>
+          </div>
+        </template>
+      </Carousel>
     </div>
+
     <div>
       <h1 class="titleClass mt-4">Feature blogs</h1>
-
-      <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          md="4"
-          lg="3"
-          v-for="blog in featuredBlogs"
-          :key="blog.id"
-          class="flex justify-center items-center"
-        >
-          <BlogCard :blog="blog" />
-        </v-col>
-      </v-row>
+      <div
+        class="grid gap-4 place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <BlogCard v-for="blog in featuredBlogs" :key="blog.id" :blog="blog" />
+      </div>
     </div>
   </div>
 </template>

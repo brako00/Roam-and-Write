@@ -27,7 +27,7 @@ const resetFilter = () => {
 <template>
   <div class="m-4 border border-gray-700-2 shadow-md rounded-lg">
     <Accordion value="0">
-      <AccordionPanel value="0">
+      <AccordionPanel>
         <AccordionHeader>Filter</AccordionHeader>
         <AccordionContent>
           <div class="grid gap-4 p-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">

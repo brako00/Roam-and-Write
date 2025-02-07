@@ -6,6 +6,8 @@ import type { blogType } from '@/types'
 import { onBeforeMount } from 'vue'
 import { parseDateFromString } from '@/types/utils'
 
+import Card from 'primevue/card'
+
 const blogsStore = useBlogsStore()
 
 const route = useRoute()
@@ -37,26 +39,31 @@ onBeforeRouteLeave(async (to, from) => {
 })
 </script>
 <template>
-  <v-card variant="elevated" class="m-4">
-    <v-card-title>
+  <Card class="m-4">
+    <template #title>
       <div class="flex justify-between">
         {{ blog.title }}
         <div @click="likedBlog" class="cursor-pointer">
-          {{ blog.likes }}<v-icon icon="mdi-heart" v-if="liked"></v-icon>
-          <v-icon icon="mdi-heart-outline" v-else></v-icon>
-        </div></div
-    ></v-card-title>
-    <v-card-subtitle>
-      <v-icon icon="mdi-account-edit"></v-icon>{{ blog.username }}
-      <v-icon icon="mdi-calendar-range"></v-icon>{{ parseDateFromString(blog.dateStart) }} -
-      {{ parseDateFromString(blog.dateEnd) }}
-      <v-icon icon="mdi-map-marker"></v-icon>{{ blog.location }}
-    </v-card-subtitle>
-    <v-card-text class="clearfix">
-      <div class="float-right ml-4 mb-2 w-1/2">
-        <v-img :src="blog.image" height="auto" />
+          {{ blog.likes }}<i v-if="liked" class="pi pi-heart-fill"></i>
+          <i v-else class="pi pi-heart"></i>
+        </div>
       </div>
-      <p>{{ blog.content }}</p>
-    </v-card-text>
-  </v-card>
+    </template>
+
+    <template #subtitle>
+      <i class="pi pi-user-edit"></i>{{ blog.username }} <i class="pi pi-calendar"></i
+      >{{ parseDateFromString(blog.dateStart) }} -
+      {{ parseDateFromString(blog.dateEnd) }}
+      <i class="pi pi-map-marker"></i>{{ blog.location }}
+    </template>
+
+    <template #content>
+      <div class="clearfix">
+        <div class="float-right ml-4 mb-2 w-1/2">
+          <img :src="blog.image" alt="blog image" />
+        </div>
+        <p>{{ blog.content }}</p>
+      </div>
+    </template>
+  </Card>
 </template>

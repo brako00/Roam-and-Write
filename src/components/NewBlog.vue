@@ -69,28 +69,8 @@ const onFileSelect = (event: any) => {
         <InputText v-model="blog.location" id="blog_location" />
       </div>
 
-      <div>
-        <FileUpload
-          accept="image/*"
-          :maxFileSize="5000000"
-          :customUpload="true"
-          @select="onFileSelect"
-        />
-      </div>
-
-      <!-- <div>
-        <FileUpload
-          ref="fileUpload"
-          mode="basic"
-          accept="image/*"
-          @upload="handleFileUpload"
-          :maxFileSize="1000000"
-          :invalidFileSizeMessage="errorMessage"
-        />
-      </div> -->
-
       <div class="field-wrap">
-        <label for="blog_date">Date</label>
+        <label for="blog_date">Duration</label>
         <DatePicker
           v-model="temporaryDate"
           selectionMode="range"
@@ -101,6 +81,23 @@ const onFileSelect = (event: any) => {
       <div class="field-wrap">
         <label for="blog_content">Content</label>
         <Editor v-model="blog.content" editorStyle="height: 320px" id="blog_content" />
+      </div>
+      <!-- TODO: Decide if one or more images can be uploaded -->
+      <div>
+        <FileUpload
+          accept="image/*"
+          :multiple="false"
+          :maxFileSize="5000000"
+          :customUpload="true"
+          @select="onFileSelect"
+        >
+          <template #empty>
+            <div class="p-4">
+              <i class="pi pi-image" style="font-size: 3rem"></i>
+              <p>Drag and drop image here to upload</p>
+            </div>
+          </template>
+        </FileUpload>
       </div>
       <div class="flex justify-center items-center">
         <Button @click="saveBlog" label="Post" />
