@@ -1,14 +1,6 @@
-# diplomski
+# Roam&Write
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+This project allows viewing and filtering travel blog posts from users and search for specific registered users. Registered users can make CRUD operations on their own blogs.
 
 ## Project Setup
 
