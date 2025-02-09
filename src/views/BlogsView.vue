@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from 'vue'
-import { useBlogsStore } from '@/stores/blogs'
 import { storeToRefs } from 'pinia'
+import { useBlogsStore } from '@/stores/blogs'
 import BlogCard from '@/components/BlogCard.vue'
 import BlogFilter from '@/components/BlogFilter.vue'
 import { initialBlogFilter } from '@/types'

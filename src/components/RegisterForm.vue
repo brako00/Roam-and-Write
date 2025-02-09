@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Password from 'primevue/password'
-import { ref } from 'vue'
 
 const registerData = ref({
   firstName: '',
@@ -13,7 +13,7 @@ const registerData = ref({
 })
 
 const registrationCheck = () => {
-  console.log(registerData.value)
+  //TODO implement function on BE and call it here
 }
 </script>
 <template>

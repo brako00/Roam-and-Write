@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import type { blogType } from '@/types'
 import { useRouter } from 'vue-router'
-import { parseDateFromString } from '@/types/utils'
 import Card from 'primevue/card'
 import Button from 'primevue/button'
 import 'primeicons/primeicons.css'
+import type { blogType } from '@/types'
+import { parseDateFromString } from '@/types/utils'
+
 const router = useRouter()
 
 const props = defineProps({

@@ -1,14 +1,14 @@
 <script setup>
 import { reactive, ref } from 'vue'
-import { useBloggersStore } from '@/stores/bloggers'
 import { useRouter } from 'vue-router'
 import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
 import Password from 'primevue/password'
+import { useBloggersStore } from '@/stores/bloggers'
 
 const router = useRouter()
-
 const bloggersStore = useBloggersStore()
+
 const loginAttempt = ref({ username: '', password: '' })
 const errors = ref(null)
 
@@ -55,12 +55,3 @@ const loginCheck = async () => {
     </form>
   </div>
 </template>
-
-<style scoped>
-/* .password {
-  width: 100%; */
-input [type='password'] {
-  width: 100% !important;
-}
-/* } */
-</style>

@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { initialBlogFilter, type blogFilter } from '@/types'
-import { useBlogsStore } from '@/stores/blogs'
 import Accordion from 'primevue/accordion'
 import AccordionHeader from 'primevue/accordionheader'
 import AccordionPanel from 'primevue/accordionpanel'
@@ -9,9 +7,12 @@ import AccordionContent from 'primevue/accordioncontent'
 import InputText from 'primevue/inputtext'
 import DatePicker from 'primevue/datepicker'
 import Button from 'primevue/button'
+import { initialBlogFilter, type blogFilter } from '@/types'
+import { useBlogsStore } from '@/stores/blogs'
+
+const blogsStore = useBlogsStore()
 
 const filter = ref({} as blogFilter)
-const blogsStore = useBlogsStore()
 
 const filterBlogs = () => {
   filter.value = { ...initialBlogFilter, ...filter.value }

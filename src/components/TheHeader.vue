@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { useBloggersStore } from '@/stores/bloggers'
 import { storeToRefs } from 'pinia'
 import Avatar from 'primevue/avatar'
+import { useBloggersStore } from '@/stores/bloggers'
 
 const { isLoggedIn } = storeToRefs(useBloggersStore())
 </script>
 <template>
   <div class="flex items-center p-4 bg-blue-500 h-12">
     <div class="flex space-x-2">
-      <router-link to="/" class="p-2 text-black" activeClass="active">Home</router-link>
-      <router-link to="/blogs" class="p-2 text-black" activeClass="active">Blogs</router-link>
-      <router-link to="/bloggers" class="p-2 text-black" activeClass="active">Bloggers</router-link>
-      <!-- <router-link to="/register" class="p-2">Register</router-link> -->
+      <router-link to="/" class="p-2 text-black" activeClass="font-bold">Home</router-link>
+      <router-link to="/blogs" class="p-2 text-black" activeClass="font-bold">Blogs</router-link>
+      <router-link to="/bloggers" class="p-2 text-black" activeClass="font-bold"
+        >Bloggers</router-link
+      >
     </div>
     <div class="flex-grow"></div>
     <router-link to="/login" class="p-2 text-black" v-if="!isLoggedIn">Login</router-link>
 
-    <!-- v-if="isLoggedIn" -->
     <div class="relative dropdown z-50">
       <Avatar image="airplane.png" shape="circle" />
       <div v-if="isLoggedIn" class="dropdown-content">
@@ -45,9 +45,5 @@ const { isLoggedIn } = storeToRefs(useBloggersStore())
 }
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.active {
-  font-weight: bold;
 }
 </style>

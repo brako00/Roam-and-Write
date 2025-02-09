@@ -1,12 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import LoginForm from '@/components/LoginForm.vue'
 import RegisterForm from '@/components/RegisterForm.vue'
 import BlogsView from '@/views/BlogsView.vue'
 import SingleBlog from '@/components/SingleBlog.vue'
 import NewBlog from '@/components/NewBlog.vue'
 import MyAccount from '@/components/MyAccount.vue'
 import BloggersView from '@/views/BloggersView.vue'
+import LoginForm from '@/components/LoginForm.vue'
+
 const routes = [
   {
     path: '/',

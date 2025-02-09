@@ -1,12 +1,21 @@
 <script setup lang="ts">
+import { onBeforeMount, ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import ProgressSpinner from 'primevue/progressspinner'
+import Carousel from 'primevue/carousel'
+import Card from 'primevue/card'
+import BlogCard from '@/components/BlogCard.vue'
 import { useBlogsStore } from '@/stores/blogs'
 import type { blogType } from '@/types'
-import { storeToRefs } from 'pinia'
-import { onBeforeMount, ref } from 'vue'
-import BlogCard from '@/components/BlogCard.vue'
 
 const blogsStore = useBlogsStore()
 const { blogs } = storeToRefs(blogsStore)
+
+const isLoading = ref(false)
+const numberOfRandomBlogs = 3
+const numberOfFeaturedBlogs = 4
+const randomBlogs = ref<blogType[]>([])
+const featuredBlogs = ref<blogType[]>([])
 
 onBeforeMount(async () => {
   isLoading.value = true
@@ -33,23 +42,13 @@ onBeforeMount(async () => {
   })
   isLoading.value = false
 })
-
-const isLoading = ref(false)
-const numberOfRandomBlogs = 3
-const numberOfFeaturedBlogs = 4
-const randomBlogs = ref<blogType[]>([])
-const featuredBlogs = ref<blogType[]>([])
-
-import ProgressSpinner from 'primevue/progressspinner'
-import Carousel from 'primevue/carousel'
-import Card from 'primevue/card'
 </script>
 <template>
   <div v-if="isLoading" class="flex justify-center align-center w-full h-full">
     <ProgressSpinner stroke-width="4" />
   </div>
   <div v-else>
-    <div class="flex justify-center align-center w-full myClass">
+    <div class="carousel">
       <Carousel
         :value="randomBlogs"
         :circular="true"
@@ -82,7 +81,9 @@ import Card from 'primevue/card'
   </div>
 </template>
 <style scoped>
-.myClass {
+.carousel {
+  @apply flex justify-center w-full;
+
   background-image: linear-gradient(#4c8ae0, white);
 }
 </style>

@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import BlogsView from '@/views/BlogsView.vue'
 import { onBeforeMount } from 'vue'
+import BlogsView from '@/views/BlogsView.vue'
 import { useBlogsStore } from '@/stores/blogs'
 import { initialBlogFilter } from '@/types'
 
 const blogsStore = useBlogsStore()
+
 const username = 'user1'
 </script>
 

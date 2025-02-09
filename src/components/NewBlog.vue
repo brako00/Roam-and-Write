@@ -1,59 +1,32 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { blogType } from '@/types'
-
 import Editor from 'primevue/editor'
-
 import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
 import FileUpload from 'primevue/fileupload'
 import DatePicker from 'primevue/datepicker'
-import { formatDateToString } from '@/types/utils'
+import type { blogType } from '@/types'
+import { formatDateToString, imageToByteArray } from '@/types/utils'
 import { useBlogsStore } from '@/stores/blogs'
-import { imageToByteArray } from '@/types/utils'
+
 const blogsStore = useBlogsStore()
 
 const blog = ref<blogType>({} as blogType)
 const temporaryDate = ref<Date[]>([])
+const errorMessage = ref('')
+
+const onFileSelect = (event: Event) => {
+  blog.value.image = event.files[0]
+}
 
 async function saveBlog() {
   console.log(blog.value)
+  //TODO: Implement the following
+
   // blog.value.image = await imageToByteArray(blog.value.image)
-  // blog.value.dateStart = formatDateToString(temporaryDate.value[0])
-  // blog.value.dateEnd = formatDateToString(temporaryDate.value[1])
+  blog.value.dateStart = formatDateToString(temporaryDate.value[0])
+  blog.value.dateEnd = formatDateToString(temporaryDate.value[1])
   // await blogsStore.createBlog(blog.value)
-}
-const errorMessage = ref('')
-
-function handleFileUpload(event: any) {
-  console.log('hello')
-  console.log(event.target.files[0])
-  // const file = event.target.files[0]
-  // if (file) {
-  //   imageToByteArray(file)
-  //     .then((byteArray) => {
-  //       blog.value.image = byteArray
-  //       errorMessage.value = ''
-  //     })
-  //     .catch((error) => {
-  //       errorMessage.value = 'Failed to convert the image to byte array.'
-  //       console.error(error)
-  //     })
-  // } else {
-  //   errorMessage.value = 'No file selected.'
-  // }
-}
-
-const fileUpload = ref()
-
-function imageUpload(event: any) {
-  blog.value.image = event.target.files[0]
-
-  // blog.value.image= fileUpload.value.files[0]
-}
-// Capture the selected image
-const onFileSelect = (event: any) => {
-  blog.value.image = event.files[0] // Store file object in form
 }
 </script>
 <template>
@@ -105,4 +78,3 @@ const onFileSelect = (event: any) => {
     </div>
   </div>
 </template>
-<style scoped></style>
