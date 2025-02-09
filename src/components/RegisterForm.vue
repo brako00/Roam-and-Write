@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
-
+import Password from 'primevue/password'
 import { ref } from 'vue'
 
 const registerData = ref({
@@ -36,14 +36,24 @@ const registrationCheck = () => {
 
       <div class="field-wrap">
         <label for="password">Password</label>
-        <InputText v-model="registerData.password" id="password" type="password" />
+        <Password
+          v-model="registerData.password"
+          id="password"
+          :feedback="false"
+          :style="{ width: '100%' }"
+          :inputStyle="{ width: '100%' }"
+          toggleMask
+        />
       </div>
       <div class="field-wrap">
         <label for="confirmPassword">Confirm password</label>
-        <InputText
+        <Password
           v-model="registerData.confirmPassword"
           id="confirmPassword"
-          type="confirmPassword"
+          :feedback="false"
+          :style="{ width: '100%' }"
+          :inputStyle="{ width: '100%' }"
+          toggleMask
         />
       </div>
 

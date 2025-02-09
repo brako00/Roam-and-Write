@@ -6,15 +6,15 @@ import Avatar from 'primevue/avatar'
 const { isLoggedIn } = storeToRefs(useBloggersStore())
 </script>
 <template>
-  <div class="flex items-center p-4 bg-primary h-12">
+  <div class="flex items-center p-4 bg-blue-500 h-12">
     <div class="flex space-x-2">
-      <router-link to="/" class="p-2">Home</router-link>
-      <router-link to="/blogs" class="p-2">Blogs</router-link>
-      <router-link to="/bloggers" class="p-2">Bloggers</router-link>
+      <router-link to="/" class="p-2 text-black" activeClass="active">Home</router-link>
+      <router-link to="/blogs" class="p-2 text-black" activeClass="active">Blogs</router-link>
+      <router-link to="/bloggers" class="p-2 text-black" activeClass="active">Bloggers</router-link>
       <!-- <router-link to="/register" class="p-2">Register</router-link> -->
     </div>
     <div class="flex-grow"></div>
-    <router-link to="/login" class="p-2" v-if="!isLoggedIn">Login</router-link>
+    <router-link to="/login" class="p-2 text-black" v-if="!isLoggedIn">Login</router-link>
 
     <!-- v-if="isLoggedIn" -->
     <div class="relative dropdown z-50">
@@ -45,5 +45,9 @@ const { isLoggedIn } = storeToRefs(useBloggersStore())
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.active {
+  font-weight: bold;
 }
 </style>

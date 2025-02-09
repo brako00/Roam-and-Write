@@ -8,17 +8,8 @@ import router from '@/router'
 import { createPinia } from 'pinia'
 const pinia = createPinia()
 
-// Vuetify
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
 import { definePreset } from '@primevue/themes'
 
-const vuetify = createVuetify({
-  components,
-  directives
-})
 const myPreset = definePreset(Aura, {
   semantic: {
     primary: {
@@ -46,5 +37,4 @@ createApp(App)
   })
   .use(pinia)
   .use(router)
-  .use(vuetify)
   .mount('#app')
