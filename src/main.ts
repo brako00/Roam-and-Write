@@ -6,10 +6,8 @@ import PrimeVue from 'primevue/config'
 import Aura from '@primevue/themes/aura'
 import '@/index.css'
 import router from '@/router'
-
-const pinia = createPinia()
-
 import { definePreset } from '@primevue/themes'
+import ToastService from 'primevue/toastservice'
 
 const myPreset = definePreset(Aura, {
   semantic: {
@@ -28,14 +26,17 @@ const myPreset = definePreset(Aura, {
     }
   }
 })
+const app = createApp(App)
 
-createApp(App)
-  .use(PrimeVue, {
-    // Default theme configuration
-    theme: {
-      preset: myPreset
-    }
-  })
-  .use(pinia)
-  .use(router)
-  .mount('#app')
+app.use(PrimeVue, {
+  // Default theme configuration
+  theme: {
+    preset: myPreset
+  }
+})
+app.use(ToastService)
+app.use(createPinia())
+app.use(router)
+
+// await initializeApp()
+app.mount('#app')

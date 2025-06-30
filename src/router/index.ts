@@ -7,6 +7,7 @@ import NewBlog from '@/components/NewBlog.vue'
 import MyAccount from '@/components/MyAccount.vue'
 import BloggersView from '@/views/BloggersView.vue'
 import LoginForm from '@/components/LoginForm.vue'
+import MyBlogs from '@/components/MyBlogs.vue'
 
 const routes = [
   {
@@ -26,7 +27,8 @@ const routes = [
   },
   { path: '/blogs', name: 'blogs', component: BlogsView },
   { path: '/blogs/:id', name: 'blog', component: SingleBlog },
-  { path: '/new', name: 'new', component: NewBlog },
+  { path: '/:op(edit|create)/:id?', name: 'new', component: NewBlog },
+  { path: '/myBlogs', name: 'myBlogs', component: MyBlogs },
   { path: '/myAccount', name: 'myAccount', component: MyAccount },
   { path: '/bloggers', name: 'bloggers', component: BloggersView }
 ]

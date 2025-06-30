@@ -2,7 +2,7 @@ export interface blogType {
   id: number
   title: string
   content: string
-  image: any
+  imagePath: any
   location: string
   dateStart: string
   dateEnd: string
@@ -33,7 +33,7 @@ export interface bloggerType {
   username: string
   email: string
   password: string
-  image: string
+  imagePath: string
   numberOfLikes?: number
   numberOfBlogs?: number
   // blogs: string[]

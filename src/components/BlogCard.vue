@@ -32,7 +32,7 @@ const props = defineProps({
         {{ blog.likes }} <i class="pi pi-heart-fill"></i></div
     ></template>
     <template #content>
-      <img :alt="blog.title" :src="blog.image" />
+      <img v-if="blog.imagePath" :alt="blog.title" :src="blog.imagePath" />
       <p class="ellipsis mt-4">
         {{ blog.content }}
       </p>

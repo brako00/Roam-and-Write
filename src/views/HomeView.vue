@@ -60,7 +60,7 @@ onBeforeMount(async () => {
       >
         <template #item="slotProps">
           <div class="flex justify-end align-center w-full h-full">
-            <img :src="slotProps.data.image" :alt="slotProps.data.title" class="aspect-16/9" />
+            <img :src="slotProps.data.imagePath" :alt="slotProps.data.title" class="aspect-16/9" />
             <Card class="absolute bottom-0 w-1/3">
               <template #title>{{ slotProps.data.title }}</template>
               <template #content>{{ slotProps.data.username }}</template>

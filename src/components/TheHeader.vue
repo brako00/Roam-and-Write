@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import Avatar from 'primevue/avatar'
-import { useBloggersStore } from '@/stores/bloggers'
+import { useUserStore } from '@/stores/user'
 
-const { isLoggedIn } = storeToRefs(useBloggersStore())
+const { isLoggedIn } = storeToRefs(useUserStore())
 </script>
 <template>
   <div class="flex items-center p-4 bg-blue-500 h-12">
@@ -20,11 +20,16 @@ const { isLoggedIn } = storeToRefs(useBloggersStore())
     <div class="relative dropdown z-50">
       <Avatar image="airplane.png" shape="circle" />
       <div v-if="isLoggedIn" class="dropdown-content">
-        <router-link to="/new" class="block px-4 py-2 text-black hover:bg-gray-200"
+        <router-link
+          :to="{ name: 'new', params: { op: 'create' } }"
+          class="block px-4 py-2 text-black hover:bg-gray-200"
           >Create blog</router-link
         >
-        <router-link to="/myAccount" class="block px-4 py-2 text-black hover:bg-gray-200"
+        <router-link to="/myBlogs" class="block px-4 py-2 text-black hover:bg-gray-200"
           >My blogs</router-link
+        >
+        <router-link to="/myAccount" class="block px-4 py-2 text-black hover:bg-gray-200"
+          >Edit account</router-link
         >
         <a href="#" class="block px-4 py-2 text-black hover:bg-gray-200" @click="isLoggedIn = false"
           >Log out</a

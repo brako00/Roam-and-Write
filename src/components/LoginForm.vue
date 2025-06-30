@@ -5,16 +5,20 @@ import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
 import Password from 'primevue/password'
 import { useBloggersStore } from '@/stores/bloggers'
+import { useUserStore } from '@/stores/user'
+import { storeToRefs } from 'pinia'
 
 const router = useRouter()
 const bloggersStore = useBloggersStore()
+const userStore = useUserStore()
+const { user } = storeToRefs(userStore)
 
 const loginAttempt = ref({ username: '', password: '' })
 const errors = ref(null)
 
 const loginCheck = async () => {
   errors.value = null
-  errors.value = await bloggersStore.loginCheck(loginAttempt.value)
+  errors.value = await userStore.loginCheck(loginAttempt.value)
   if (errors) {
     router.push('/')
   }

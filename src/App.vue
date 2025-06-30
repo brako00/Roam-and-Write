@@ -2,6 +2,8 @@
 import { RouterView } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 // import TheFooter from '@/components/TheFooter.vue'
+
+import Toast from 'primevue/toast'
 </script>
 
 <template>
@@ -9,5 +11,6 @@ import TheHeader from '@/components/TheHeader.vue'
     <TheHeader />
     <!-- <TheFooter /> -->
     <RouterView />
+    <Toast />
   </main>
 </template>

@@ -16,7 +16,7 @@ onBeforeMount(async () => {
     :key="blogger.id"
     class="bg-white shadow-md rounded-lg p-6 flex items-center justify-between space-x-4 m-4 hoverClass"
   >
-    <img :src="blogger.image" class="rounded-full w-24 h-24 object-cover" />
+    <img :src="blogger.imagePath" class="rounded-full w-24 h-24 object-cover" />
 
     <div class="flex-1 ml-12">
       <div class="font-bold text-2xl">{{ blogger.username }}</div>
