@@ -2,8 +2,8 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import type { blogType, blogFilter } from '@/types/index'
 import axios from 'axios'
-import { Endpoints, api_url } from '@/types/endoints'
-import useToastSetters from '@/types/useToastSetters'
+import { Endpoints, api_url } from '@/constants/endoints'
+import useToastSetters from '@/utils/useToastSetters'
 
 export const useBlogsStore = defineStore('blogs', () => {
   const blogs = ref<blogType[]>([])

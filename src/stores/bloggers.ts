@@ -2,8 +2,8 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import type { bloggerType, bloggersFilter } from '@/types/index'
 import axios from 'axios'
-import { api_url, Endpoints } from '@/types/endoints'
-import useToastSetters from '@/types/useToastSetters'
+import { api_url, Endpoints } from '@/constants/endoints'
+import useToastSetters from '@/utils/useToastSetters'
 
 export const useBloggersStore = defineStore('bloggers', () => {
   const bloggers = ref<bloggerType[]>([])
@@ -18,9 +18,8 @@ export const useBloggersStore = defineStore('bloggers', () => {
       // const response = await axios.get('http://localhost:3000/users')
 
       bloggers.value = response.data
-    } catch (error:any) {
+    } catch (error: any) {
       setErrorMessageToast(error)
-
     }
   }
 
@@ -32,9 +31,8 @@ export const useBloggersStore = defineStore('bloggers', () => {
       //backend mock
       // const response = await axios.get(`http://localhost:3000/users/${id}`)
       bloggers.value = response.data
-    } catch (error:any) {
+    } catch (error: any) {
       setErrorMessageToast(error)
-
     }
   }
 

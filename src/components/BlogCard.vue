@@ -5,7 +5,7 @@ import Card from 'primevue/card'
 import Button from 'primevue/button'
 import 'primeicons/primeicons.css'
 import type { blogType } from '@/types'
-import { parseDateFromString } from '@/types/utils'
+import { parseDateFromString } from '@/utils/utils'
 
 const router = useRouter()
 

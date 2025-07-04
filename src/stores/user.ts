@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import axios from 'axios'
-import { api_url, Endpoints } from '@/types/endoints'
+import { api_url, Endpoints } from '@/constants/endoints'
 import type { bloggerType } from '@/types'
-import useToastSetters from '@/types/useToastSetters'
+import useToastSetters from '@/utils/useToastSetters'
 import { useBloggersStore } from './bloggers'
 
 interface loginType {
